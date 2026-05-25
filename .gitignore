@@ -1,0 +1,20 @@
+# ── TLS Certificates & Keys ──────────────────────────────────────────────────
+# Never commit private keys or issued certificates to version control.
+# Place your CA-issued certs in the certs/ directory locally;
+# they are injected into the container via Docker volume mounts.
+certs/*.key
+certs/*.crt
+certs/*.pem
+certs/*.p12
+certs/*.pfx
+
+# Keep the directory itself tracked (for Docker volume mount placeholder)
+!certs/.gitkeep
+
+# ── OS / Editor artifacts ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
